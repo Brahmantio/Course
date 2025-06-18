@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-pip install joblib
 import joblib
 import time
 from PIL import Image
