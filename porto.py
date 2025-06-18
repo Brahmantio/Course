@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pickle
+import joblib
 import time
 from PIL import Image
 
@@ -101,7 +102,7 @@ with tab1:
             
         model_path = "/mount/src/course/modeldqlab.pkl"
         with open('modeldqlab', 'rb') as file:
-            loaded_model = pickle.load(file)
+            loaded_model = joblib.load(file)
         
         # Predicting the house price
         prediction = loaded_model.predict(features)
