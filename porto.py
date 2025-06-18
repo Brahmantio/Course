@@ -94,11 +94,6 @@ with tab1:
     
     # Predict Button
     if st.button('Predict Now!'):
-        #model_path = "/Users/bramantiow/Documents/Bootcamp/DQLAB MACHINE LEARNING/SESI 15/modeldqlab.pkl"
-        #with open("modeldqlab", 'rb') as file:
-            #loaded_model = pickle.load(file)
-            
-        model_path = "/mount/src/course/modeldqlab.pkl"
         with open('modeldqlab.pkl', 'rb') as file:
             loaded_model = pickle.load(file)
         
