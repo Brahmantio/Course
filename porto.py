@@ -98,7 +98,7 @@ with tab1:
         
         model="/mount/src/course/modeldqlab.pkl"
         with open('modeldqlab.pkl', 'rb') as file:
-            loaded_model = pickle.load(file)
+                    loaded_model = pickle.load(file)
         
         # Predicting the house price
         prediction = loaded_model.predict(features)
