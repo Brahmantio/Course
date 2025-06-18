@@ -100,7 +100,7 @@ with tab1:
             #loaded_model = pickle.load(file)
             
         #model_path = "/mount/src/course/modeldqlab.pkl"
-        with open('modeldqlab', 'rb') as file:
+        with open("modeldqlab.pkl", 'rb') as file:
             loaded_model = pickle.load(file)
         
         # Predicting the house price
