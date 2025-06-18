@@ -97,19 +97,13 @@ with tab1:
     
     # Predict Button
     if st.button('Predict Now!'):
-                # Simpan model
-                joblib.dump(model, 'modeldqlab.pkl')
-
-                # Muat model
-                loaded_model = joblib.load('modeldqlab.pkl')
-
         #model_path = "/Users/bramantiow/Documents/Bootcamp/DQLAB MACHINE LEARNING/SESI 15/modeldqlab.pkl"
         #with open("modeldqlab", 'rb') as file:
             #loaded_model = pickle.load(file)
             
-        #model_path = "/Users/bramantiow/Documents/Bootcamp/DQLAB MACHINE LEARNING/SESI 15/modeldqlab.pkl"
-        #with open(model_path, 'rb') as file:
-            #loaded_model = pickle.load(file)
+        model_path = "/Users/bramantiow/Documents/Bootcamp/DQLAB MACHINE LEARNING/SESI 15/modeldqlab.pkl"
+        with open(model_path, 'rb') as file:
+            loaded_model = pickle.load(file)
         
         # Predicting the house price
         prediction = loaded_model.predict(features)
