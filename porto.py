@@ -3,6 +3,7 @@ import pandas as pd
 import pickle
 import time
 from custom_model import CustomModelClass
+import joblib
 from PIL import Image
 
 st.set_page_config(page_title="House Price Prediction", layout="centered", initial_sidebar_state="auto", page_icon="🏠")
@@ -96,9 +97,15 @@ with tab1:
     
     # Predict Button
     if st.button('Predict Now!'):
-        model_path = "/Users/bramantiow/Documents/Bootcamp/DQLAB MACHINE LEARNING/SESI 15/modeldqlab.pkl"
-        with open("modeldqlab", 'rb') as file:
-            loaded_model = pickle.load(file)
+                # Simpan model
+                joblib.dump(model, 'modeldqlab.pkl')
+
+                # Muat model
+                model = joblib.load('modeldqlab.pkl')
+
+        #model_path = "/Users/bramantiow/Documents/Bootcamp/DQLAB MACHINE LEARNING/SESI 15/modeldqlab.pkl"
+        #with open("modeldqlab", 'rb') as file:
+            #loaded_model = pickle.load(file)
             
         #model_path = "/Users/bramantiow/Documents/Bootcamp/DQLAB MACHINE LEARNING/SESI 15/modeldqlab.pkl"
         #with open(model_path, 'rb') as file:
