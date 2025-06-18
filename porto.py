@@ -101,7 +101,7 @@ with tab1:
                 joblib.dump(model, 'modeldqlab.pkl')
 
                 # Muat model
-                model = joblib.load('modeldqlab.pkl')
+                loaded_model = joblib.load('modeldqlab.pkl')
 
         #model_path = "/Users/bramantiow/Documents/Bootcamp/DQLAB MACHINE LEARNING/SESI 15/modeldqlab.pkl"
         #with open("modeldqlab", 'rb') as file:
