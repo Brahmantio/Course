@@ -100,18 +100,16 @@ with tab1:
             #loaded_model = pickle.load(file)
             
         model_path = "/mount/src/course/modeldqlab.pkl"
-        with open(model_path, 'rb') as file:
+        with open('modeldqlab.pkl', 'rb') as file:
             loaded_model = pickle.load(file)
         
         # Predicting the house price
         prediction = loaded_model.predict(features)
         
-        
         # Displaying the result
         with st.spinner('Wait for it...'):
             time.sleep(4)
             st.success(f"Hasil prediksiku: harga rumah di {daerah} seharga ${prediction[0]:,.2f}")
-
         
             
     with tab2:
