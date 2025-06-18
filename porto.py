@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import pickle
+import joblib
 import time
 from PIL import Image
 
@@ -94,8 +94,7 @@ with tab1:
     
     # Predict Button
     if st.button('Predict Now!'):
-        with open("modeldqlab.pkl", "rb") as file:
-            loaded_model = pickle.load(file)
+        loaded_model = joblib.load('/mount/src/course/modeldqlab.pkl')
         
         # Predicting the house price
         prediction = loaded_model.predict(features)
