@@ -99,7 +99,7 @@ with tab1:
         #with open("modeldqlab", 'rb') as file:
             #loaded_model = pickle.load(file)
             
-        model_path = "modeldqlab"
+        model_path = "Course/modeldqlab"
         with open('modeldqlab.pkl', 'rb') as file:
             loaded_model = pickle.load(file)
         
