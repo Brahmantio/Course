@@ -2,8 +2,6 @@ import streamlit as st
 import pandas as pd
 import pickle
 import time
-from custom_model import CustomModelClass
-import joblib
 from PIL import Image
 
 st.set_page_config(page_title="House Price Prediction", layout="centered", initial_sidebar_state="auto", page_icon="🏠")
