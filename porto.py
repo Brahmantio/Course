@@ -20,7 +20,6 @@ uploaded_file = st.sidebar.file_uploader("Upload your CSV file", type=["csv"])
 tab1, tab2, tab3 = st.tabs(["Start Prediction", "About Prediction", "How to Use"])
 with tab1:
     st.header("Input your specific data")
-    daerah = st.text_input("Which area do you live in?")
     crim= st.slider("Tingkat Kejahatan",
                     min_value=0,
                     max_value=88,
@@ -109,7 +108,7 @@ with tab1:
         # Displaying the result
         with st.spinner('Wait for it...'):
             time.sleep(4)
-            st.success(f"Hasil prediksiku: harga rumah di {daerah} seharga ${prediction[0]:,.2f}")
+            st.success(f"Hasil prediksiku: harga rumah seharga ${prediction[0]:,.2f}")
         
             
     with tab2:
