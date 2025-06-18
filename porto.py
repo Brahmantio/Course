@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import pickle
 import joblib
 import time
 from PIL import Image
