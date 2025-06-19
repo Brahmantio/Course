@@ -96,7 +96,7 @@ with tab1:
     if st.button('Predict Now!'):
         #loaded_model = joblib.load('/mount/src/course/modeldqlab.pkl')
         
-        model = "modeldqlab.pkl"
+        model = "/mount/src/course/modeldqlab.pkl"
         with open(model, 'rb') as file:
          loaded_model = pickle.load(file)
         except Exception as e:
