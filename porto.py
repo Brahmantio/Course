@@ -97,7 +97,7 @@ with tab1:
         #loaded_model = joblib.load('/mount/src/course/modeldqlab.pkl')
         
         model = "/mount/src/course/modeldqlab.pkl"
-        with open("modeldqlab.pkl", 'rb') as file:
+        with open('modeldqlab.pkl', 'rb') as file:
          loaded_model = pickle.load(file)
         
         # Predicting the house price
