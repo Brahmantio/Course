@@ -99,6 +99,8 @@ with tab1:
         model = "modeldqlab.pkl"
         with open(model, 'rb') as file:
          loaded_model = pickle.load(file)
+        except Exception as e:
+            st.error(f"Gagal memuat model: {e}")
         
         # Predicting the house price
         prediction = loaded_model.predict(features)
