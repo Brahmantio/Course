@@ -94,15 +94,13 @@ with tab1:
     
     # Predict Button
     if st.button('Predict Now!'):
-            model = "course/modeldqlab.pkl"
-            with open(model, 'rb') as file:
-                    loaded_model = pickle.load(file)
-                    prediction = loaded_model.predict(features)
-                    with st.spinner('Wait for it...'):
+            with open('modeldqlab.pkl','rb') as file:
+                    model = pickle.load(file)
+                prediction = model.predict(features)
+            with st.spinner('Wait for it...'):
                             time.sleep(4)
             st.success(f"Hasil prediksiku: harga rumah seharga ${prediction[0]:,.2f}")
         
-            
     with tab2:
         st.header("Category explanation")
         st.write("CRIM - Tingkat kejahatan per kapita per kota")
