@@ -94,9 +94,10 @@ with tab1:
     
     # Predict Button
     if st.button('Predict Now!'):
-        with open('modeldqlab.pkl', 'rb') as file:
-         loaded_model = pickle.load(file)
-        
+            #model = "/mount/src/course/modeldqlab.pkl"
+            with open('modeldqlab.pkl', 'rb') as file:
+                    loaded_model = pickle.load(file)
+        #loaded_model = joblib.load('/mount/src/course/modeldqlab.pkl')
         
         # Predicting the house price
         prediction = loaded_model.predict(features)
