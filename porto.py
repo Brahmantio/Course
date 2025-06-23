@@ -93,9 +93,9 @@ with tab1:
     features = pd.DataFrame(data, index=[0])
     
     # Predict Button
-    if st.button('Predict Now!'):
-            model_loc = '/mount/src/course/modeldqlab.pkl'
-        with open(model_loc,'rb') as file:
+if st.button('Predict Now!'):
+            #model_loc = '/mount/src/course/modeldqlab.pkl'
+        with open('modeldqlab.pkl','rb') as file:
                 model = pickle.load(file)
         prediction = model.predict(features)
         with st.spinner('Wait for it...'):
