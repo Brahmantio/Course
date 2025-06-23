@@ -19,6 +19,7 @@ uploaded_file = st.sidebar.file_uploader("Upload your CSV file", type=["csv"])
     # Membuat tab untuk aplikasi
 tab1, tab2, tab3 = st.tabs(["Start Prediction", "About Prediction", "How to Use"])
 with tab1:
+def user_input_features():
     st.header("Input your specific data")
     crim= st.slider("Tingkat Kejahatan",
                     min_value=0,
@@ -97,13 +98,18 @@ with tab1:
             'B': b,
             'LSTAT': lstat}
     features = pd.DataFrame(data, index=[0])
-    
+
+
+ input_df = user_input_features()
+
     # Predict Button
 if st.button('Predict Now!'):
+ df = input_df
+ st.write(df)
             #model_loc = '/mount/src/course/modeldqlab.pkl'
  with open('modeldqlab.pkl','rb') as file:
         model = pickle.load(file)
-        prediction = model.predict(features)
+        prediction = model.predict(df)
  with st.spinner('Wait for it...'):
         time.sleep(4)
         st.success(f"Hasil prediksiku: harga rumah seharga ${prediction[0]:,.2f}")
