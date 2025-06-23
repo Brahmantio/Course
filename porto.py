@@ -100,7 +100,7 @@ with tab1:
             features = pd.DataFrame(data, index=[0])
 
 
- input_df = user_input_features()
+         input_df = user_input_features()
 
     # Predict Button
 if st.button('Predict Now!'):
