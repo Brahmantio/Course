@@ -95,10 +95,10 @@ with tab1:
     # Predict Button
 if st.button('Predict Now!'):
             #model_loc = '/mount/src/course/modeldqlab.pkl'
-        with open('modeldqlab.pkl','rb') as file:
-                model = pickle.load(file)
+with open('modeldqlab.pkl','rb') as file:
+        model = pickle.load(file)
         prediction = model.predict(features)
-        with st.spinner('Wait for it...'):
+with st.spinner('Wait for it...'):
                 time.sleep(4)
                 st.success(f"Hasil prediksiku: harga rumah seharga ${prediction[0]:,.2f}")
         
