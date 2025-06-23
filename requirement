@@ -1,6 +1,0 @@
-streamlit==1.28.2
-pandas
-numpy
-scikit-learn
-joblib
-Pillow
