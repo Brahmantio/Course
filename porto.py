@@ -101,7 +101,7 @@ with tab1:
                             time.sleep(4)
             st.success(f"Hasil prediksiku: harga rumah seharga ${prediction[0]:,.2f}")
         
-    with tab2:
+with tab2:
         st.header("Category explanation")
         st.write("CRIM - Tingkat kejahatan per kapita per kota")
         st.write("ZN - Proporsi lahan pemukiman yang dizonasi untuk lot berukuran di atas 25.000 kaki persegi")
@@ -117,7 +117,7 @@ with tab1:
         st.write("B - 1000(Bk - 0.63)^2 di mana Bk adalah proporsi penduduk kulit hitam per kota")
         st.write("LSTAT - Persentase status rendah dari populasi")
         st.write("MEDV - Nilai tengah rumah yang dihuni pemilik dalam ribuan dolar")
-    with tab3:
+with tab3:
         st.header("How to use this application")
         st.write("1. Apabila ingin  memprediksi menggunakan file, pastikan file tersebut dalam format .csv dan seluruh atribut sama")
         st.write("2. Supaya prediksi akurat, pastikan nilai yang diinput sudah benar atau sesuai dengan perhitungan")
