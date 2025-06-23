@@ -94,8 +94,8 @@ with tab1:
     
     # Predict Button
     if st.button('Predict Now!'):
-            model = 'course/modeldqlab.pkl'
-        with open('model','rb') as file:
+            model_loc = '/mount/src/course/modeldqlab.pkl'
+        with open(model_loc,'rb') as file:
                 model = pickle.load(file)
         prediction = model.predict(features)
         with st.spinner('Wait for it...'):
