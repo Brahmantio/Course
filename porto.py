@@ -108,7 +108,7 @@ if st.button('Predict Now!'):
         prediction = model.predict(features)
  with st.spinner('Wait for it...'):
         time.sleep(4)
-        st.success(f"Hasil prediksiku: harga rumah seharga ${prediction[0]:,.2f}")
+        st.success(f"Hasil prediksi: ${prediction[0]:,.2f}")
         
 with tab2:
         st.header("Category explanation")
