@@ -84,20 +84,20 @@ with tab1:
                             step=1.00,
                             value=10.00)
     
-    data = {'CRIM': crim,
-            'ZN': zn,
-            'INDUS': indus,
-            'CHAS': 1 if chas == "Yes" else 0,
-            'NOX': nox,
-            'RM': rm,
-            'AGE': age,
-            'DIS': dis,
-            'RAD' : rad,
-            'TAX': tax,
-            'PTRATIO': ptratio,
-            'B': b,
-            'LSTAT': lstat}
-    features = pd.DataFrame(data, index=[0])
+            data = {'CRIM': crim,
+                    'ZN': zn,
+                    'INDUS': indus,
+                    'CHAS': 1 if chas == "Yes" else 0,
+                    'NOX': nox,
+                    'RM': rm,
+                    'AGE': age,
+                    'DIS': dis,
+                    'RAD' : rad,
+                    'TAX': tax,
+                    'PTRATIO': ptratio,
+                    'B': b,
+                    'LSTAT': lstat}
+            features = pd.DataFrame(data, index=[0])
 
 
  input_df = user_input_features()
