@@ -57,6 +57,11 @@ with tab1:
                     max_value=100,
                     step=1,
                     value=2)
+    rad= st.slider("Indeks aksesibilitas ke jalan raya",
+                    min_value=1,
+                    max_value=10,
+                    step=1,
+                    value=0)
     tax= st.slider("Tarif pajak properti",
                     min_value=100,
                     max_value=1000,
@@ -86,6 +91,7 @@ with tab1:
             'RM': rm,
             'AGE': age,
             'DIS': dis,
+            'RAD' : rad,
             'TAX': tax,
             'PTRATIO': ptratio,
             'B': b,
