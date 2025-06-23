@@ -19,7 +19,7 @@ uploaded_file = st.sidebar.file_uploader("Upload your CSV file", type=["csv"])
     # Membuat tab untuk aplikasi
 tab1, tab2, tab3 = st.tabs(["Start Prediction", "About Prediction", "How to Use"])
 with tab1:
-def user_input_features():
+        def user_input_features():
     st.header("Input your specific data")
     crim= st.slider("Tingkat Kejahatan",
                     min_value=0,
