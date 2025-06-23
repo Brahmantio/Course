@@ -19,96 +19,93 @@ uploaded_file = st.sidebar.file_uploader("Upload your CSV file", type=["csv"])
     # Membuat tab untuk aplikasi
 tab1, tab2, tab3 = st.tabs(["Start Prediction", "About Prediction", "How to Use"])
 with tab1:
-        def user_input_features():
-            st.header("Input your specific data")
-            crim= st.slider("Tingkat Kejahatan",
-                            min_value=0,
-                            max_value=88,
-                            step=1,
-                            value=44)
-            zn= st.slider("Proporsi lahan pemukiman",
-                            min_value=0,
-                            max_value=100,
-                            step=1,
-                            value=60)
-            indus= st.slider("Proporsi lahan pemukiman diatas 25.000 kaki",
-                            min_value=0.46,
-                            max_value=30.00,
-                            step=0.1,
-                            value=0.46)
-            chas= st.radio("Apakah pemungkiman dekat dengan sungai?",
-                            ("No", "Yes"))
-            nox= st.slider("Konsentrasi oksida nitrogen (jumlah NO dan NO2)",
-                            min_value=0.1,
-                            max_value=1.0,
-                            step=0.1,
-                            value=0.2)
-            rm= st.slider("Rata-rata jumlah kamar per-rumah",
-                            min_value=2,
-                            max_value=8,
-                            step=1,
-                            value=2)
-            age= st.slider("Usia rumah",
-                            min_value=2,
-                            max_value=100,
-                            step=1,
-                            value=1)
-            dis= st.slider("Jarak ke pusat perkantoran",
-                            min_value=2,
-                            max_value=100,
-                            step=1,
-                            value=2)
-            rad= st.slider("Indeks aksesibilitas ke jalan raya",
-                            min_value=1,
-                            max_value=10,
-                            step=1,
-                            value=0)
-            tax= st.slider("Tarif pajak properti",
-                            min_value=100,
-                            max_value=1000,
-                            step=1,
-                            value=0)
-            ptratio= st.slider("Rasio murid-guru per kota",
-                            min_value=10.1,
-                            max_value=22.0,
-                            step=1.1,
-                            value=10.1)
-            b= st.slider("proporsi penduduk warga negara asing perkota",
-                            min_value=0.32,
-                            max_value=396.9,
-                            step=0.32,
-                            value=50.00)
-            lstat= st.slider("Persentase status rendah dari populasi",
-                            min_value=1.73,
-                            max_value=37.97,
-                            step=1.00,
-                            value=10.00)
+        st.header("Input your specific data")
+        crim= st.slider("Tingkat Kejahatan",
+                        min_value=0,
+                        max_value=88,
+                        step=1,
+                        value=44)
+        zn= st.slider("Proporsi lahan pemukiman",
+                        min_value=0,
+                        max_value=100,
+                        step=1,
+                        value=60)
+        indus= st.slider("Proporsi lahan pemukiman diatas 25.000 kaki",
+                        min_value=0.46,
+                        max_value=30.00,
+                        step=0.1,
+                        value=0.46)
+        chas= st.radio("Apakah pemungkiman dekat dengan sungai?",
+                        ("No", "Yes"))
+        nox= st.slider("Konsentrasi oksida nitrogen (jumlah NO dan NO2)",
+                        min_value=0.1,
+                        max_value=1.0,
+                        step=0.1,
+                        value=0.2)
+        rm= st.slider("Rata-rata jumlah kamar per-rumah",
+                        min_value=2,
+                        max_value=8,
+                        step=1,
+                        value=2)
+        age= st.slider("Usia rumah",
+                        min_value=2,
+                        max_value=100,
+                        step=1,
+                        value=1)
+        dis= st.slider("Jarak ke pusat perkantoran",
+                        min_value=2,
+                        max_value=100,
+                        step=1,
+                        value=2)
+        rad= st.slider("Indeks aksesibilitas ke jalan raya",
+                        min_value=1,
+                        max_value=10,
+                        step=1,
+                        value=0)
+        tax= st.slider("Tarif pajak properti",
+                        min_value=100,
+                        max_value=1000,
+                        step=1,
+                        value=0)
+        ptratio= st.slider("Rasio murid-guru per kota",
+                        min_value=10.1,
+                        max_value=22.0,
+                        step=1.1,
+                        value=10.1)
+        b= st.slider("proporsi penduduk warga negara asing perkota",
+                        min_value=0.32,
+                        max_value=396.9,
+                        step=0.32,
+                        value=50.00)
+        lstat= st.slider("Persentase status rendah dari populasi",
+                        min_value=1.73,
+                        max_value=37.97,
+                        step=1.00,
+                        value=10.00)
     
-            data = {'CRIM': crim,
-                    'ZN': zn,
-                    'INDUS': indus,
-                    'CHAS': 1 if chas == "Yes" else 0,
-                    'NOX': nox,
-                    'RM': rm,
-                    'AGE': age,
-                    'DIS': dis,
-                    'RAD' : rad,
-                    'TAX': tax,
-                    'PTRATIO': ptratio,
-                    'B': b,
-                    'LSTAT': lstat}
-            features = pd.DataFrame(data, index=[0])
+        data = {'CRIM': crim,
+                'ZN': zn,
+                'INDUS': indus,
+                'CHAS': 1 if chas == "Yes" else 0,
+                'NOX': nox,
+                'RM': rm,
+                'AGE': age,
+                'DIS': dis,
+                'RAD' : rad,
+                'TAX': tax,
+                'PTRATIO': ptratio,
+                'B': b,
+                'LSTAT': lstat}
+        features = pd.DataFrame(data, index=[0])
 
 
-input_df = user_input_features()
+
     # Predict Button
 if st.button('Predict Now!'):
- df = input_df
- st.write(df)
             #model_loc = '/mount/src/course/modeldqlab.pkl'
  with open('modeldqlab.pkl','rb') as file:
         model = pickle.load(file)
-        prediction = model.predict(df)
+        prediction = model.predict(features)
  with st.spinner('Wait for it...'):
         time.sleep(4)
         st.success(f"Hasil prediksiku: harga rumah seharga ${prediction[0]:,.2f}")
