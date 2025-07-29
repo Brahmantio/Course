@@ -97,6 +97,7 @@ with tab1:
                 'B': b,
                 'LSTAT': lstat}
         features = pd.DataFrame(data, index=[0])
+        features = features.drop(columns=['RAD'], errors='ignore')
 
     # Predict Button
 if st.button('Predict Now!'):
