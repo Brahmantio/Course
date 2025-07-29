@@ -98,8 +98,6 @@ with tab1:
                 'LSTAT': lstat}
         features = pd.DataFrame(data, index=[0])
 
-
-
     # Predict Button
 if st.button('Predict Now!'):
             #model_loc = '/mount/src/course/modeldqlab.pkl'
