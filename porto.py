@@ -24,12 +24,12 @@ with tab1:
                         min_value=0,
                         max_value=88,
                         step=1,
-                        value=44)
+                        value=0)
         zn= st.slider("Proporsi lahan pemukiman",
                         min_value=0,
                         max_value=100,
                         step=1,
-                        value=60)
+                        value=0)
         indus= st.slider("Proporsi lahan pemukiman diatas 25.000 kaki",
                         min_value=0.46,
                         max_value=30.00,
@@ -41,7 +41,7 @@ with tab1:
                         min_value=0.1,
                         max_value=1.0,
                         step=0.1,
-                        value=0.2)
+                        value=0.1)
         rm= st.slider("Rata-rata jumlah kamar per-rumah",
                         min_value=2,
                         max_value=8,
@@ -51,7 +51,7 @@ with tab1:
                         min_value=2,
                         max_value=100,
                         step=1,
-                        value=1)
+                        value=2)
         dis= st.slider("Jarak ke pusat perkantoran",
                         min_value=2,
                         max_value=100,
@@ -61,12 +61,12 @@ with tab1:
                         min_value=1,
                         max_value=10,
                         step=1,
-                        value=0)
+                        value=1)
         tax= st.slider("Tarif pajak properti",
                         min_value=100,
                         max_value=1000,
                         step=1,
-                        value=0)
+                        value=100)
         ptratio= st.slider("Rasio murid-guru per kota",
                         min_value=10.1,
                         max_value=22.0,
@@ -76,12 +76,12 @@ with tab1:
                         min_value=0.32,
                         max_value=396.9,
                         step=0.32,
-                        value=50.00)
+                        value=0.32)
         lstat= st.slider("Persentase status rendah dari populasi",
                         min_value=1.73,
                         max_value=37.97,
                         step=1.00,
-                        value=10.00)
+                        value=1.73)
     
         data = {'CRIM': crim,
                 'ZN': zn,
